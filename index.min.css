@@ -1,0 +1,73 @@
+:root {
+    --textColor: #333333;
+    --background: #ffffff;
+    --accentColor: #3cb371;
+    --button: #2e8b57;
+    --hoverColor: #f0f0f0;
+    --grayColor: #858585;
+    --iconURL: url(/icon.png);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --textColor: #d3d3d3;
+        --background: #1a1a1a;
+        --hoverColor: #2b2b2b;
+    }
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background);
+    color: var(--textColor);
+}
+.sidebar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 70px;
+    height: 100vh;
+    z-index: 100;
+    background-color: var(--accentColor);
+    border-radius: 0px 5px 5px 0px;
+}
+.sidebarIcon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-image: var(--iconURL);
+    background-repeat: no-repeat;
+    background-size: 65px;
+    background-position: 2.5px 2.5px;
+}
+.sidebar_content {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    left: -150px;
+    top: 0px;
+    z-index: 99;
+    background-color: var(--button);
+    transition: left 0.5s;
+    box-shadow: #1a1a1a 5px 5px 5px;
+    border-radius: 0px 5px 5px 0px;
+}
+.sidebar:hover + .sidebar_content,
+.sidebar_content:hover {
+    left: 50px;
+}
+
+main {
+    margin-left: 90px;
+}
+ul {
+    list-style: none;
+}
+li a {
+    color: white;
+    font-size: 15pt;
+}
+li:first-child a {
+    font-size: 20pt;
+}
