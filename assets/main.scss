@@ -37,3 +37,19 @@ pre {
   overflow-x: auto;
   border-radius: 4px;
 }
+
+pre, code {
+  background: #2d2d2d;
+  color: #f8f8f2;
+}
+
+pre {
+  padding: 10px;
+  overflow-x: auto;
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
