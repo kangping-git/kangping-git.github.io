@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,11 +10,21 @@
     </head>
     <body>
         <div class="sidebar"><a class="sidebarIcon" href="/"></a></div>
-        <div class="sidebar_content">
+        <div class="nav-panel">
             <ul>
                 <li><a href="/">Home</a></li><li><a href="/blogs/">Blogs</a></li>
             </ul>
         </div>
-        <main><h1>Hello</h1></main>
+        <main>
+            <h1>Hello</h1>
+            <section class="post-list">
+                {% for post in site.posts limit:5 %}
+                <article>
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: '%Y-%m-%d' }}</time>
+                </article>
+                {% endfor %}
+            </section>
+        </main>
     </body>
 </html>
