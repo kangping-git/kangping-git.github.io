@@ -1,1 +1,16 @@
+# Site settings
+remote_theme: jekyll/minima
+
+# Directory where posts will be stored
+collections_dir: blogs
+
+# Permalink structure for posts
+permalink: /blogs/:year/:month/:day/:title.html
+
+# Plugins for additional features
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Include special directories
 include: [.well-known]
