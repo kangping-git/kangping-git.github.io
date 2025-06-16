@@ -1,18 +1,42 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
 @import "minima";
 
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #e8eaed;
+  --link-color: #8ab4f8;
+  --bar-color: #222;
+}
+
 body {
-    background: #1a1a1a;
-    color: #e8eaed;
-    font-family: 'Fira Sans', Arial, sans-serif;
+  font-family: 'Fira Sans', Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 a {
-    color: #8ab4f8;
+  color: var(--link-color);
 }
 
-.site-header, .site-footer {
-    background: #222;
+.site-header,
+.site-footer {
+  background: var(--bar-color);
 }
+
+pre, code {
+  background: #2d2d2d;
+  color: #f8f8f2;
+}
+
+pre {
+  padding: 10px;
+  overflow-x: auto;
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
