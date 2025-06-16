@@ -76,15 +76,23 @@ li a:hover {
 li:first-child a {
   font-size: 1.3rem;
 }
-pre, code {
-  background: #2d2d2d;
-  color: #f8f8f2;
+pre,
+code {
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 pre {
   padding: 10px;
   overflow-x: auto;
+  border-radius: 5px;
 }
-code {
-  padding: 2px 4px;
-  border-radius: 4px;
+.post-list {
+  margin-top: 20px;
+}
+.post-list article {
+  margin-bottom: 15px;
+}
+.post-date {
+  color: var(--color-muted);
+  font-size: 0.875rem;
 }

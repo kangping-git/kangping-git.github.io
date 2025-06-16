@@ -8,6 +8,7 @@
   --text-color: #e8eaed;
   --link-color: #8ab4f8;
   --bar-color: #222;
+  --code-bg: #2d2d2d;
 }
 
 body {
@@ -23,6 +24,18 @@ a {
 .site-header,
 .site-footer {
   background: var(--bar-color);
+}
+
+pre,
+code {
+  background: var(--code-bg);
+  color: var(--text-color);
+}
+
+pre {
+  padding: 0.5rem;
+  overflow-x: auto;
+  border-radius: 4px;
 }
 
 pre, code {
